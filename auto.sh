@@ -51,7 +51,7 @@ sort -u $domain.gauLinks.txt -o $domain.links.txt &&
 go run link_checker.go -links=$domain.links.txt -output=$domain.aliveLinks.txt &&
 go run SMLFinder.go -links=$domain.aliveLinks.txt -output=$domain.output.txt -save=$domain.savefile.txt &&
 sed 's/"//g' $domain.output.txt | sort | uniq > $domain.blh.txt &&
-rm -rf *.html $domain.gauLinks.txt $domain.links.txt $domain.aliveLinks.txt $domain.output.txt
+rm -rf *.html $domain.gauLinks.txt $domain.links.txt $domain.aliveLinks.txt
 sleep 1
 
 #Nuclei Scanner
